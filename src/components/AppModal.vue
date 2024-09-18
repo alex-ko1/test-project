@@ -111,7 +111,8 @@ const closeDialog = (event: any) => {
         flex-direction: column;
         margin-bottom: 1.5rem;
       }
-      &.form-registration{
+
+      &.form-registration {
         .input-wrapper:nth-child(-n+4) {
           display: inline-block;
           width: 48%;
@@ -125,11 +126,13 @@ const closeDialog = (event: any) => {
           }
         }
       }
-      .forgot-password{
+
+      .forgot-password {
         font-size: 1rem;
         font-weight: 500;
         text-decoration: underline;
       }
+
       button {
         margin-top: 1rem;
         margin-left: auto;

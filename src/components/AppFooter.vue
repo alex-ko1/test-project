@@ -5,9 +5,7 @@
       <AppNavLinks/>
       <div class="footer-right">
         <form>
-          <span>
-            Підпишіться на розсилку
-          </span>
+          <span>Підпишіться на розсилку</span>
           <input type="text" class="input" placeholder="Ім'я">
           <AppButton name="Підписатися" is-painted/>
         </form>
@@ -33,28 +31,33 @@ import AppLogo from "@/components/AppLogo.vue";
 
 
 <style scoped lang="scss">
-footer{
+footer {
   background-color: #323131;
   color: #fff;
-  .container{
+
+  .container {
     padding: 4rem 0 8rem;
     margin: 0 auto;
     max-width: 1520px;
     display: flex;
     justify-content: space-between;
-    .footer-right{
+
+    .footer-right {
       margin-top: 1rem;
     }
-    form{
+
+    form {
       display: flex;
       flex-direction: column;
-      span{
+
+      span {
         font-size: 1.5rem;
         font-weight: 700;
         line-height: 2rem;
         margin-bottom: 1rem;
       }
-      .input{
+
+      .input {
         width: 22rem;
         margin-bottom: .5rem;
         background: transparent;
@@ -64,14 +67,17 @@ footer{
         color: #ffffff;
       }
     }
-    .soc-links{
+
+    .soc-links {
       margin-top: 2.5rem;
-      &>a{
+
+      & > a {
         margin-right: 1rem;
       }
     }
   }
-  .copyright{
+
+  .copyright {
     text-align: center;
     color: #ADADAD;
     font-size: 1rem;

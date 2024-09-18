@@ -6,6 +6,7 @@
 .logo {
   display: block;
   margin-right: 4rem;
+
   img {
     width: 178px;
   }

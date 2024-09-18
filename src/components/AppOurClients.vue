@@ -1,5 +1,5 @@
 <template>
-  <AppSectionTitle title="Наші клієнти" />
+  <AppSectionTitle title="Наші клієнти"/>
   <div class="subtitle">Більше 500 клієнтів по всій Україні</div>
   <div class="map">
     <img src="@/assets/map-Ukraine.png" alt="">
@@ -12,17 +12,19 @@ import AppSectionTitle from "@/components/AppSectionTitle.vue";
 </script>
 
 <style scoped lang="scss">
-.subtitle{
+.subtitle {
   margin-top: 2.5rem;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 2rem;
 }
-.map{
+
+.map {
   margin-top: 4.5rem;
   text-align: center;
   padding-bottom: 10rem;
-  img{
+
+  img {
     width: 100%;
   }
 }

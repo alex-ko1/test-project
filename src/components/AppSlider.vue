@@ -5,7 +5,7 @@
       унікальний у гармонії європейського сучасного дизайну з турецькою
       культурою.
     </div>
-    <AppButton name="Дізнатись більше" />
+    <AppButton name="Дізнатись більше"/>
   </div>
   <carousel :items-to-show="1">
     <slide v-for="slide in 5" :key="slide">
@@ -15,8 +15,8 @@
     </slide>
 
     <template #addons>
-      <navigation />
-      <pagination />
+      <navigation/>
+      <pagination/>
     </template>
   </carousel>
 </template>
@@ -34,12 +34,14 @@ import AppButton from "@/components/AppButton.vue";
   justify-content: space-between;
   align-items: flex-end;
   padding: 14.8rem 0 3.5rem;
+
   .subtitle {
     width: 45%;
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
+
 .carousel__item {
   min-height: 200px;
   width: 100%;
@@ -51,6 +53,7 @@ import AppButton from "@/components/AppButton.vue";
   justify-content: center;
   align-items: center;
 }
+
 .carousel__slide {
   padding: 10px;
 }

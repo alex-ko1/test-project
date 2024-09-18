@@ -41,34 +41,41 @@ const events = ref([
 </script>
 
 <style scoped lang="scss">
-.events{
+.events {
   display: flex;
   justify-content: space-between;
-  .event{
+
+  .event {
     padding: 1rem 1rem 1.5rem;
     width: 32%;
     background: #323131;
-    img{
+
+    img {
       display: block;
       width: 100%;
     }
-    .date{
+
+    .date {
       margin: 1rem 0 .5rem;
-      &::before{
+
+      &::before {
         background: url("@/assets/calendar.png") no-repeat;
       }
     }
-    .place::before{
-        background: url("@/assets/location.png") no-repeat;
+
+    .place::before {
+      background: url("@/assets/location.png") no-repeat;
     }
-    .date,.place{
+
+    .date, .place {
       display: flex;
       align-items: center;
       font-size: 1rem;
       line-height: 1.5rem;
       font-weight: 600;
       color: #FFFFFF99;
-      &::before{
+
+      &::before {
         content: '';
         background-size: contain;
         display: inline-block;
@@ -77,13 +84,15 @@ const events = ref([
         margin: 0 10px 0 4px;
       }
     }
-    .name{
+
+    .name {
       font-size: 1.5rem;
       font-weight: 700;
       line-height: 2rem;
       margin: 1.5rem 0 1rem;
     }
-    .description{
+
+    .description {
       font-size: 1rem;
       line-height: 1.5rem;
     }

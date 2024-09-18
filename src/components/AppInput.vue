@@ -1,5 +1,5 @@
 <template>
-  <label :for="input.id">{{input.label}}</label>
+  <label :for="input.id">{{ input.label }}</label>
   <input :type="input.type" :class="input.class" :placeholder="input.placeholder" :id="input.id">
 </template>
 <script setup lang="ts">
@@ -10,17 +10,19 @@ export interface Input {
   placeholder: string,
   class: string,
 }
+
 const props = defineProps<{
   input: Input,
 }>()
 </script>
 <style scoped lang="scss">
-label{
+label {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5rem;
 }
-input{
+
+input {
   width: 100%;
   margin-top: .5rem;
   background: transparent;

@@ -11,18 +11,19 @@ import AppButton from "@/components/AppButton.vue";
 const props = defineProps<{
   title: string,
   button?: {
-   name: string
+    name: string
   }
 }>()
 </script>
 
 <style scoped lang="scss">
-.section{
+.section {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin: 10rem 0 2.5rem;
-  .title{
+
+  .title {
     width: 49%;
     border-bottom: 2px solid #ffffff;
     font-size: 3rem;

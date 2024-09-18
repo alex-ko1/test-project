@@ -15,8 +15,10 @@
         </div>
       </div>
     </div>
-    <AppModal subtitle="Будь ласка, заповніть усі поля" title="Заявка нового клієнта" @close-dialog="closeDialog" :show="isShow && dialogName==='signUp'" :inputs="signUp" :name="dialogName"/>
-    <AppModal title="Увійти" @close-dialog="closeDialog" :show="isShow && dialogName === 'signIn'" :inputs="signIn" :name="dialogName"/>
+    <AppModal subtitle="Будь ласка, заповніть усі поля" title="Заявка нового клієнта" @close-dialog="closeDialog"
+              :show="isShow && dialogName==='signUp'" :inputs="signUp" :name="dialogName"/>
+    <AppModal title="Увійти" @close-dialog="closeDialog" :show="isShow && dialogName === 'signIn'" :inputs="signIn"
+              :name="dialogName"/>
   </header>
 </template>
 
@@ -34,19 +36,19 @@ import type {Input} from "@/components/AppInput.vue";
 
 library.add(fas, faFacebook, faTelegram, faWhatsapp)
 
-const socialLinks:{name:string,url:string}[] = [
+const socialLinks: { name: string, url: string }[] = [
   {
     name: 'facebook', url: '#',
-  },{
+  }, {
     name: 'telegram', url: '#',
   },
   {
     name: 'whatsapp', url: '#',
   },
 ]
-const isShow:Ref<boolean> =  ref(false)
+const isShow: Ref<boolean> = ref(false)
 const dialogName: Ref<string> = ref('')
-const showDialog = (name:string) => {
+const showDialog = (name: string) => {
   isShow.value = !isShow.value;
   dialogName.value = name;
 }

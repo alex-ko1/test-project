@@ -26,6 +26,7 @@ import AppFooter from "@/components/AppFooter.vue";
 main {
   background-color: #272626;
   color: #fff;
+
   .container {
     margin: 0 auto;
     max-width: 1520px;

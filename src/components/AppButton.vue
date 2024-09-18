@@ -21,15 +21,18 @@ const props = defineProps({
   display: block;
   cursor: pointer;
   transition: .4s;
-  &:hover{
+
+  &:hover {
     background-color: #ffffff;
     color: #272626;
   }
 }
+
 .btn-painted {
   color: #272626;
   background-color: #fff;
-  &:hover{
+
+  &:hover {
     background-color: transparent;
     color: #ffffff;
   }

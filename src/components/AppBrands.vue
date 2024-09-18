@@ -6,7 +6,7 @@
         <img src="@/assets/Hermossa.png" alt=""/>
       </div>
     </div>
-    <carousel :items-to-show="1" >
+    <carousel :items-to-show="1">
       <slide v-for="slide in 5" :key="slide">
         <div class="carousel__item">
           <img src="@/assets/slide2.png" alt=""/>
@@ -14,7 +14,7 @@
         </div>
       </slide>
       <template #addons>
-        <pagination />
+        <pagination/>
       </template>
     </carousel>
   </div>
@@ -28,25 +28,29 @@ import AppSectionTitle from "@/components/AppSectionTitle.vue";
 </script>
 
 <style scoped lang="scss">
-.wrapper{
+.wrapper {
   margin-top: 10rem;
 }
-.brands{
+
+.brands {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   row-gap: 1.5rem;
   margin-bottom: 5rem;
-  .brand{
+
+  .brand {
     width: 24%;
     border: 1px solid #525151;
     padding: 1.6rem 3rem;
-    img{
+
+    img {
       max-width: 100%;
     }
   }
 }
-.carousel__item .azzaro{
+
+.carousel__item .azzaro {
   position: absolute;
   left: 0;
   right: 0;

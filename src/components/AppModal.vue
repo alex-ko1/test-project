@@ -20,13 +20,13 @@
 <script setup lang="ts">
 
 import AppButton from "@/components/AppButton.vue";
-import AppInput, {type Input} from "@/components/AppInput.vue";
+import AppInput, {type IInput} from "@/components/AppInput.vue";
 
 const props = defineProps<{
   title: string,
   subtitle?: string,
   show: boolean,
-  inputs: Input[]
+  inputs: IInput[]
   name: string
 }>()
 const emit = defineEmits(['closeDialog'])

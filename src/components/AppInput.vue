@@ -3,7 +3,7 @@
   <input :type="input.type" :class="input.class" :placeholder="input.placeholder" :id="input.id">
 </template>
 <script setup lang="ts">
-export interface Input {
+export interface IInput {
   type: string,
   label: string,
   id: string,
@@ -12,7 +12,7 @@ export interface Input {
 }
 
 const props = defineProps<{
-  input: Input,
+  input: IInput,
 }>()
 </script>
 <style scoped lang="scss">

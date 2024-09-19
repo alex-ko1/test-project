@@ -32,7 +32,7 @@ import AppNavLinks from "@/components/AppNavLinks.vue";
 import AppLogo from "@/components/AppLogo.vue";
 import AppModal from "@/components/AppModal.vue";
 import {type Ref, ref} from "vue";
-import type {Input} from "@/components/AppInput.vue";
+import type {IInput} from "@/components/AppInput.vue";
 
 library.add(fas, faFacebook, faTelegram, faWhatsapp)
 
@@ -57,7 +57,7 @@ const closeDialog = () => {
   dialogName.value = '';
 }
 
-const signUp: Ref<Input[]> = ref([
+const signUp: Ref<IInput[]> = ref([
   {
     type: 'text',
     label: 'Ім\'я',
@@ -110,7 +110,7 @@ const signUp: Ref<Input[]> = ref([
 
 ])
 
-const signIn: Ref<Input[]> = ref([
+const signIn: Ref<IInput[]> = ref([
   {
     type: 'text',
     label: 'Ім\'я користувача',

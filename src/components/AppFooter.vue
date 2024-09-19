@@ -10,10 +10,10 @@
           <AppButton name="Підписатися" is-painted/>
         </form>
         <div class="soc-links">
-          <a href="#"><img src="@/assets/instagram.png" alt=""></a>
-          <a href="#"><img src="@/assets/Facebook.png" alt=""></a>
-          <a href="#"><img src="@/assets/Linkedin.png" alt=""></a>
-          <a href="#"><img src="@/assets/telegram.png" alt=""></a>
+          <a href="#" aria-label="instagram"><img src="@/assets/instagram.png" alt=""></a>
+          <a href="#" aria-label="Facebook"><img src="@/assets/Facebook.png" alt=""></a>
+          <a href="#" aria-label="Linkedin"><img src="@/assets/Linkedin.png" alt=""></a>
+          <a href="#" aria-label="telegram"><img src="@/assets/telegram.png" alt=""></a>
         </div>
       </div>
 
@@ -71,8 +71,31 @@ footer {
     .soc-links {
       margin-top: 2.5rem;
 
-      & > a {
+      a {
         margin-right: 1rem;
+        &[aria-label] {
+          position: relative;
+          &:after {
+            opacity: 0;
+            content: attr(aria-label);
+            transition: .3s;
+            position: absolute;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 300;
+            padding: .5rem 1rem;
+            border-radius: 20px;
+            background-color: #272626;
+            top: 30px;
+            left: -2rem;
+            width: max-content;
+          }
+        }
+        &:hover{
+          &[aria-label]:after{
+            opacity: 1;
+          }
+        }
       }
     }
   }

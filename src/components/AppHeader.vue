@@ -6,6 +6,7 @@
         <AppNavLinks/>
         <div class="soc-links">
           <a v-for="(link,i) in socialLinks" :key="i" :href="link.url">
+            <span class="label">{{link.name}}</span>
             <font-awesome-icon :icon="['fab', link.name]"/>
           </a>
         </div>
@@ -171,9 +172,25 @@ header {
           width: 40px;
           height: 40px;
           text-align: center;
+          position: relative;
 
           &:not(:last-of-type) {
             margin-right: 1rem;
+          }
+          .label{
+            opacity: 0;
+            transition: .3s;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 300;
+            padding: .5rem 1rem;
+            border-radius: 20px;
+            background-color: #323131;
+            position: absolute;
+            top: 50px;
+          }
+          &:hover .label{
+            opacity: 1;
           }
         }
       }

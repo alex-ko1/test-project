@@ -6,18 +6,18 @@
         <img src="@/assets/Hermossa.png" alt=""/>
       </div>
     </div>
-    <carousel :items-to-show="1">
-      <slide v-for="slide in 5" :key="slide">
-        <div class="carousel__item">
-          <img src="@/assets/slide2.png" alt=""/>
-          <img src="@/assets/AZZARO.png" class="azzaro" alt="">
-        </div>
-      </slide>
-      <template #addons>
-        <pagination/>
-      </template>
-    </carousel>
   </div>
+  <carousel :items-to-show="1">
+    <slide v-for="slide in 5" :key="slide">
+      <div class="carousel__item">
+        <img src="@/assets/slide2.png" alt=""/>
+        <img src="@/assets/AZZARO.png" class="azzaro" alt="">
+      </div>
+    </slide>
+    <template #addons>
+      <pagination/>
+    </template>
+  </carousel>
 </template>
 
 <script setup lang="ts">
@@ -30,6 +30,10 @@ import AppSectionTitle from "@/components/AppSectionTitle.vue";
 <style scoped lang="scss">
 .wrapper {
   margin-top: 10rem;
+  @media (max-width: 1170px) {
+    margin-top: 5rem;
+  }
+  position: relative;
 }
 
 .brands {
@@ -38,6 +42,9 @@ import AppSectionTitle from "@/components/AppSectionTitle.vue";
   justify-content: space-between;
   row-gap: 1.5rem;
   margin-bottom: 5rem;
+  @media (max-width: 1170px) {
+    margin-bottom: 7rem;
+  }
 
   .brand {
     width: 24%;
@@ -46,6 +53,15 @@ import AppSectionTitle from "@/components/AppSectionTitle.vue";
 
     img {
       max-width: 100%;
+    }
+    @media (max-width: 1170px) {
+      width: 32%;
+    }
+    @media (max-width: 768px) {
+      width: 49%;
+    }
+    @media (max-width: 568px) {
+      width: 100%;
     }
   }
 }
@@ -57,5 +73,12 @@ import AppSectionTitle from "@/components/AppSectionTitle.vue";
   top: 0;
   bottom: 0;
   margin: auto;
+  width: 50%;
+}
+.carousel__item{
+  width: 100%;
+  img{
+    width: inherit;
+  }
 }
 </style>

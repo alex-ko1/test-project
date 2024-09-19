@@ -90,6 +90,13 @@ const closeDialog = (event: any) => {
       background: none;
     }
 
+    @media (max-width: 1170px) {
+      width: 80%;
+    }
+    @media (max-width: 576px) {
+      width: 95%;
+      padding: 1rem;
+    }
     .title {
       font-size: 2.5rem;
       font-weight: 700;
@@ -111,18 +118,19 @@ const closeDialog = (event: any) => {
         flex-direction: column;
         margin-bottom: 1.5rem;
       }
+      @media (min-width: 768px) {
+        &.form-registration {
+          .input-wrapper:nth-child(-n+4) {
+            display: inline-block;
+            width: 48%;
 
-      &.form-registration {
-        .input-wrapper:nth-child(-n+4) {
-          display: inline-block;
-          width: 48%;
+            &:nth-child(odd) {
+              margin-right: 4%;
+            }
 
-          &:nth-child(odd) {
-            margin-right: 4%;
-          }
-
-          & > * {
-            display: block;
+            & > * {
+              display: block;
+            }
           }
         }
       }
@@ -136,6 +144,27 @@ const closeDialog = (event: any) => {
       button {
         margin-top: 1rem;
         margin-left: auto;
+      }
+    }
+    @media (max-width: 768px) {
+      .title{
+        font-size: 1.5rem;
+        line-height: 2rem;
+        width: 70%;
+      }
+      .close-modal-window{
+        right: 1rem;
+        font-size: 2.5rem;
+      }
+      form{
+        margin-top: 1.5rem;
+        .input-wrapper{
+          margin-bottom: 1rem;
+        }
+        button{
+          width: 100%;
+          margin-top: 1.5rem;
+        }
       }
     }
   }

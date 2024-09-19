@@ -4,11 +4,19 @@
 
 <style scoped lang="scss">
 .logo {
-  display: block;
   margin-right: 4rem;
-
+  max-width: 178px;
+  display: flex;
+  align-items: center;
   img {
-    width: 178px;
+    width: 100%;
+    height: min-content;
+  }
+  @media(max-width: 1600px) {
+    margin-right: 2rem;
+  }
+  @media(max-width: 1600px) {
+    width: 22vw;
   }
 }
 </style>

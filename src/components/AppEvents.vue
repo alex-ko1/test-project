@@ -1,12 +1,14 @@
 <template>
-  <AppSectionTitle title="Заходи" :button="{name:'Дивитися усі'}"/>
-  <div class="events">
-    <div class="event" v-for="(event,i) in events" :key="i">
-      <img :src="event.image" alt=""/>
-      <span class="date">{{ event.date }}</span>
-      <span class="place">{{ event.place }}</span>
-      <h4 class="name">{{ event.name }}</h4>
-      <p class="description">{{ event.description }}</p>
+  <div class="wrapper">
+    <AppSectionTitle title="Заходи" :button="{name:'Дивитися усі'}"/>
+    <div class="events">
+      <div class="event" v-for="(event,i) in events" :key="i">
+        <img :src="event.image" alt=""/>
+        <span class="date">{{ event.date }}</span>
+        <span class="place">{{ event.place }}</span>
+        <h4 class="name">{{ event.name }}</h4>
+        <p class="description">{{ event.description }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -41,14 +43,24 @@ const events = ref([
 </script>
 
 <style scoped lang="scss">
+.wrapper{
+  position: relative;
+}
 .events {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  @media (max-width: 1170px) {
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 8rem;
+  }
 
   .event {
     padding: 1rem 1rem 1.5rem;
     width: 32%;
     background: #323131;
+    min-width: 344px;
 
     img {
       display: block;

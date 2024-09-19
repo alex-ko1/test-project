@@ -26,11 +26,28 @@
     margin: 0 auto 4rem;
 
     h1 {
-      width: 50%;
+      width: 51%;
       font-size: 5rem;
       font-weight: 700;
-      line-height: 88px;
+      line-height: 5rem;
       color: #fff;
+    }
+    @media(max-width: 1600px) {
+      max-width: 90%;
+    }
+    @media (max-width: 768px) {
+      max-width: 95%;
+    }
+    @media(max-width: 1170px) {
+      h1{
+        font-size: 3rem;
+        width: 100%;
+        max-width: 500px;
+        line-height: 48px;
+      }
+    }
+    @media(max-width: 768px) {
+      margin-bottom: 1rem;
     }
   }
 

@@ -1,24 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap");
 @import './base.css';
 
-ol.carousel__pagination{
+ol.carousel__pagination {
     margin-top: 1.5rem;
 }
+
 .carousel__prev svg,
-.carousel__next svg{
+.carousel__next svg {
     visibility: hidden;
 }
-button.carousel__prev{
+
+button.carousel__prev {
     width: 8rem;
 }
-.carousel__prev:before{
+
+.carousel__prev:before {
     content: "";
     background: url("@/assets/arrow-left.png");
     display: inline-block;
     width: 3.5rem;
     height: 3.5rem;
 }
-.carousel__next:before{
+
+.carousel__next:before {
     content: "";
     background: url("@/assets/arrow-right.png");
     display: inline-block;
@@ -26,15 +30,49 @@ button.carousel__prev{
     height: 3.5rem;
     margin-left: -4rem;
 }
-.carousel__pagination-item .carousel__pagination-button::after{
+
+.carousel__pagination-item .carousel__pagination-button::after {
     background: #323131;
     border-radius: 100%;
     width: 12px;
     height: 12px;
     transition: .4s;
 }
-.carousel__pagination-item .carousel__pagination-button.carousel__pagination-button--active::after{
+
+.carousel__pagination-item .carousel__pagination-button.carousel__pagination-button--active::after {
     width: 64px;
     background: #ffffff;
     border-radius: 40px;
+}
+
+html {
+    @media (max-width: 1600px) {
+        /*font-size: 14px;*/
+    }
+}
+@media (max-width: 768px) {
+    .carousel{
+        position: relative;
+    }
+    button.carousel__prev{
+        top: auto;
+        width: auto;
+        bottom: -1.5rem;
+        &:before {
+            left: 0;
+            position: absolute;
+        }
+    }
+    button.carousel__next{
+        top: auto;
+        width: auto;
+        bottom: -1.5rem;
+        &:before {
+            position: absolute;
+            right: 0;
+        }
+    }
+    ol.carousel__pagination{
+        margin-top: 1rem;
+    }
 }

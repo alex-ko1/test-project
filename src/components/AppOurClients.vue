@@ -23,6 +23,9 @@ import AppSectionTitle from "@/components/AppSectionTitle.vue";
   margin-top: 4.5rem;
   text-align: center;
   padding-bottom: 10rem;
+  @media (max-width: 1170px) {
+    padding-bottom: 5rem;
+  }
 
   img {
     width: 100%;

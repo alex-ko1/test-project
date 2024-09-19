@@ -1,8 +1,8 @@
 <template>
   <header>
     <div class="container">
-      <div class="header__links">
-        <AppLogo/>
+      <AppLogo/>
+      <div class="header__links" :class="{'mobile-menu':isMenuOpened}">
         <AppNavLinks/>
         <div class="soc-links">
           <a v-for="(link,i) in socialLinks" :key="i" :href="link.url">
@@ -14,6 +14,10 @@
           <AppButton name="Зареєструватися" is-painted @click="showDialog('signUp')"/>
           <AppButton name="Увійти" @click="showDialog('signIn')"/>
         </div>
+      </div>
+      <div class="burger-button">
+        <font-awesome-icon :icon="['fas', 'fa-bars']" class="burger" v-if="!isMenuOpened" @click="menuToggle"/>
+        <font-awesome-icon :icon="['fas', 'xmark']" class="xmark" v-if="isMenuOpened" @click="menuToggle"/>
       </div>
     </div>
     <AppModal subtitle="Будь ласка, заповніть усі поля" title="Заявка нового клієнта" @close-dialog="closeDialog"
@@ -38,14 +42,9 @@ import type {IInput} from "@/components/AppInput.vue";
 library.add(fas, faFacebook, faTelegram, faWhatsapp)
 
 const socialLinks: { name: string, url: string }[] = [
-  {
-    name: 'facebook', url: '#',
-  }, {
-    name: 'telegram', url: '#',
-  },
-  {
-    name: 'whatsapp', url: '#',
-  },
+  {name: 'facebook', url: '#',},
+  {name: 'telegram', url: '#',},
+  {name: 'whatsapp', url: '#',},
 ]
 const isShow: Ref<boolean> = ref(false)
 const dialogName: Ref<string> = ref('')
@@ -58,7 +57,7 @@ const closeDialog = () => {
   dialogName.value = '';
 }
 
-const signUp: Ref<IInput[]> = ref([
+const signUp: IInput[] = [
   {
     type: 'text',
     label: 'Ім\'я',
@@ -109,9 +108,9 @@ const signUp: Ref<IInput[]> = ref([
     class: 'address',
   },
 
-])
+]
 
-const signIn: Ref<IInput[]> = ref([
+const signIn: IInput[] = [
   {
     type: 'text',
     label: 'Ім\'я користувача',
@@ -127,7 +126,12 @@ const signIn: Ref<IInput[]> = ref([
     class: 'password',
   },
 
-])
+]
+
+const isMenuOpened = ref(false);
+const menuToggle = () => {
+  isMenuOpened.value = !isMenuOpened.value;
+}
 </script>
 
 <style scoped lang="scss">
@@ -142,6 +146,7 @@ header {
     padding: 22px 0;
     margin: 0 auto;
     max-width: 1520px;
+    display: flex;
 
     .header__links {
       display: flex;
@@ -174,11 +179,12 @@ header {
           text-align: center;
           position: relative;
 
-          &:not(:last-of-type) {
+          & {
             margin-right: 1rem;
           }
           .label{
             opacity: 0;
+            pointer-events: none;
             transition: .3s;
             color: #ffffff;
             font-size: 1rem;
@@ -191,6 +197,7 @@ header {
           }
           &:hover .label{
             opacity: 1;
+            pointer-events: auto;
           }
         }
       }
@@ -198,6 +205,43 @@ header {
       .header-buttons {
         display: flex;
         gap: 1rem;
+      }
+    }
+    .burger-button{
+      display: none;
+    }
+    @media (max-width: 1170px) {
+      justify-content: space-between;
+      padding: 1rem 0;
+      .header__links{
+        display: none;
+      }
+      .burger-button{
+        display: flex;
+      }
+      .header__links.mobile-menu{
+        display: block;
+      }
+    }
+    .xmark,
+    .burger {
+      color: #ffffff;
+      margin: auto .5rem auto 0;
+      font-size: 2rem;
+      @media (max-width: 768px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media(max-width: 1600px) {
+      max-width: 95%;
+    }
+    @media(max-width: 1440px) {
+      .header__links {
+        width: 100%;
+        .soc-links{
+          margin-left: 1rem;
+        }
       }
     }
   }

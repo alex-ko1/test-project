@@ -30,6 +30,12 @@ main {
   .container {
     margin: 0 auto;
     max-width: 1520px;
+    @media (max-width: 1600px) {
+      max-width: 90%;
+    }
+    @media (max-width: 768px) {
+      max-width: 95%;
+    }
   }
 }
 </style>

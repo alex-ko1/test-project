@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="container">
-      <AppLogo/>
+      <AppLogo class="footer-logo"/>
       <AppNavLinks/>
       <div class="footer-right">
         <form>
@@ -98,6 +98,38 @@ footer {
         }
       }
     }
+    @media(max-width: 1600px) {
+      max-width: 90%;
+    }
+    @media (max-width: 768px) {
+      max-width: 95%;
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      width: max-content;
+      padding: 1.5rem 0;
+      & .footer-logo{
+        order: -1;
+        width: 10rem;
+      }
+      & .footer-right{
+        order: -1;
+        form{
+          span{
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: 2rem;
+          }
+        }
+        .soc-links{
+          text-align: center;
+        }
+      }
+      .navbar{
+        margin: 2.5rem 0 0;
+      }
+    }
   }
 
   .copyright {
@@ -105,6 +137,9 @@ footer {
     color: #ADADAD;
     font-size: 1rem;
     padding-bottom: 1.5rem;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 }
 </style>

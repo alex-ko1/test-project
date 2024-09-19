@@ -53,4 +53,13 @@ footer {
     }
   }
 }
+@media (max-width: 1440px) {
+  header{
+    .navbar-nav {
+      & > .nav-item:not(:last-of-type) {
+        margin-right: 1.5rem;
+      }
+    }
+  }
+}
 </style>

@@ -40,6 +40,26 @@ import AppButton from "@/components/AppButton.vue";
     font-size: 1.5rem;
     line-height: 2rem;
   }
+  @media (max-width: 1440px) {
+    padding: 9rem 0 5rem;
+  }
+  @media (max-width: 1170px) {
+    flex-direction: column;
+    .subtitle{
+      width: auto;
+      margin-bottom: 1.5rem;
+    }
+    button{
+      margin: 0 auto;
+    }
+  }
+  @media (max-width: 768px) {
+    padding-top: 4rem;
+    .subtitle{
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
 }
 
 .carousel__item {
@@ -52,6 +72,9 @@ import AppButton from "@/components/AppButton.vue";
   display: flex;
   justify-content: center;
   align-items: center;
+  img{
+    width: inherit;
+  }
 }
 
 .carousel__slide {

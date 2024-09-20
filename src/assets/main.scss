@@ -33,7 +33,7 @@ button.carousel__prev {
 }
 
 .carousel__pagination-item .carousel__pagination-button::after {
-    background: #323131;
+    background: $gray-dark;
     border-radius: 100%;
     width: 12px;
     height: 12px;
@@ -42,7 +42,7 @@ button.carousel__prev {
 
 .carousel__pagination-item .carousel__pagination-button.carousel__pagination-button--active::after {
     width: 64px;
-    background: #ffffff;
+    background: $white;
     border-radius: 40px;
 }
 

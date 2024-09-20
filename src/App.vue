@@ -24,7 +24,7 @@ import AppFooter from "@/components/AppFooter.vue";
 
 <style scoped lang="scss">
 main {
-  background-color: #272626;
+  background-color: $blackish;
   color: #fff;
 
   .container {

@@ -1,7 +1,7 @@
 <template>
   <a class="logo" href="#">
-<!--    <img src="@/assets/logo.png" alt="Logo"/>-->
-    <SiteLogo class="logo-svg"/>
+    <img src="../assets/icons/logo.svg" alt="Logo" class="logo-svg"/>
+<!--    <SiteLogo class="logo-svg"/>-->
   </a>
 </template>
 <script setup lang="ts">
@@ -14,7 +14,7 @@ import SiteLogo from '@/assets/icons/logo.svg';
   display: flex;
   align-items: center;
   .logo-svg {
-    width: 100%;
+    width: 22vw;
     height: min-content;
   }
   @media(max-width: 1600px) {

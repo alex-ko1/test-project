@@ -26,9 +26,9 @@ input {
   width: 100%;
   margin-top: .5rem;
   background: transparent;
-  border: 1px solid #ADADAD;
+  border: 1px solid $gray-light;
   font-size: 1rem;
   padding: .75rem 0 .75rem 1rem;
-  color: #ffffff;
+  color: $white;
 }
 </style>

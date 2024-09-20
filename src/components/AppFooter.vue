@@ -36,7 +36,7 @@ import TelegramIcon from "@/assets/icons/telegram.svg"
 
 <style scoped lang="scss">
 footer {
-  background-color: #323131;
+  background-color: $gray-dark;
   color: #fff;
 
   .container {
@@ -65,10 +65,10 @@ footer {
         width: 22rem;
         margin-bottom: .5rem;
         background: transparent;
-        border: 1px solid #ADADAD;
+        border: 1px solid $gray-light;
         font-size: 1rem;
         padding: .75rem 0 .75rem 1rem;
-        color: #ffffff;
+        color: $white;
       }
     }
 
@@ -84,12 +84,12 @@ footer {
             content: attr(aria-label);
             transition: .3s;
             position: absolute;
-            color: #ffffff;
+            color: $white;
             font-size: 1rem;
             font-weight: 300;
             padding: .5rem 1rem;
             border-radius: 20px;
-            background-color: #272626;
+            background-color: $blackish;
             top: 30px;
             left: -2rem;
             width: max-content;
@@ -138,7 +138,7 @@ footer {
 
   .copyright {
     text-align: center;
-    color: #ADADAD;
+    color: $gray-light;
     font-size: 1rem;
     padding-bottom: 1.5rem;
     @media (max-width: 768px) {

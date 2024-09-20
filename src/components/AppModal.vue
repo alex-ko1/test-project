@@ -70,8 +70,8 @@ const closeDialog = (event: any) => {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 40%;
-    color: #ffffff;
-    background-color: #323131;
+    color: $white;
+    background-color: $gray-dark;
     padding: 2.5rem;
     border-radius: 5px;
     box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
@@ -84,7 +84,7 @@ const closeDialog = (event: any) => {
       font-size: 3rem;
       font-family: system-ui;
       font-weight: 100;
-      color: #ffffff;
+      color: $white;
       cursor: pointer;
       border: none;
       background: none;

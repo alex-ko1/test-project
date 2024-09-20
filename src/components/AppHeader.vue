@@ -7,7 +7,6 @@
         <div class="soc-links">
           <a v-for="(link,i) in socialLinks" :key="i" :href="link.url">
             <span class="label">{{link.name}}</span>
-<!--            <font-awesome-icon :icon="['fab', link.name]"/>-->
             <component :is="link.icon" ></component>
           </a>
         </div>
@@ -140,7 +139,7 @@ const menuToggle = () => {
 
 <style scoped lang="scss">
 header {
-  background-color: #272626;
+  background-color: $blackish;
   position: fixed;
   top: 0;
   width: 100%;
@@ -183,13 +182,14 @@ header {
             opacity: 0;
             pointer-events: none;
             transition: .3s;
-            color: #ffffff;
+            color: $white;
             font-size: 1rem;
             font-weight: 300;
             padding: .5rem 1rem;
             border-radius: 20px;
-            background-color: #323131;
+            background-color: $gray-dark;
             position: absolute;
+            left: -2rem;
             top: 50px;
           }
           &:hover .label{
@@ -222,7 +222,7 @@ header {
     }
     .xmark,
     .burger {
-      color: #ffffff;
+      color: $white;
       margin: auto .5rem auto 0;
       font-size: 2rem;
       @media (max-width: 768px) {

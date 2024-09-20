@@ -31,7 +31,7 @@ const props = defineProps<{
 
   .title {
     width: 49%;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid $white;
     font-size: 3rem;
     line-height: 56px;
     font-weight: 700;

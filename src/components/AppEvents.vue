@@ -59,7 +59,7 @@ const events = ref([
   .event {
     padding: 1rem 1rem 1.5rem;
     width: 32%;
-    background: #323131;
+    background: $gray-dark;
     min-width: 344px;
 
     img {

@@ -32,7 +32,7 @@ header {
       margin-right: 3rem;
     }
     & > .nav-item:hover {
-      border-bottom: 1px solid #ffffff;
+      border-bottom: 1px solid $white;
     }
 
     & > .nav-item:not(:last-of-type) {

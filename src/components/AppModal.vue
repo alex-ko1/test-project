@@ -120,6 +120,8 @@ const closeDialog = (event: any) => {
       }
       @media (min-width: 768px) {
         &.form-registration {
+          height: 65vh;
+          overflow: scroll;
           .input-wrapper:nth-child(-n+4) {
             display: inline-block;
             width: 48%;

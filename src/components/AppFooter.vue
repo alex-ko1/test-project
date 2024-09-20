@@ -10,10 +10,10 @@
           <AppButton name="Підписатися" is-painted/>
         </form>
         <div class="soc-links">
-          <a href="#" aria-label="instagram"><img src="@/assets/instagram.png" alt=""></a>
-          <a href="#" aria-label="Facebook"><img src="@/assets/Facebook.png" alt=""></a>
-          <a href="#" aria-label="Linkedin"><img src="@/assets/Linkedin.png" alt=""></a>
-          <a href="#" aria-label="telegram"><img src="@/assets/telegram.png" alt=""></a>
+          <a href="#" aria-label="Instagram"><InstagramIcon /></a>
+          <a href="#" aria-label="Facebook"><FacebookIcon /></a>
+          <a href="#" aria-label="Linkedin"><LinkedinIcon /></a>
+          <a href="#" aria-label="Telegram"><TelegramIcon /></a>
         </div>
       </div>
 
@@ -23,10 +23,14 @@
 </template>
 
 <script setup lang="ts">
-
 import AppButton from "@/components/AppButton.vue";
 import AppNavLinks from "@/components/AppNavLinks.vue";
 import AppLogo from "@/components/AppLogo.vue";
+import InstagramIcon from "@/assets/icons/instagram.svg"
+import FacebookIcon from "@/assets/icons/facebook.svg"
+import LinkedinIcon from "@/assets/icons/linkedin.svg"
+import TelegramIcon from "@/assets/icons/telegram.svg"
+
 </script>
 
 

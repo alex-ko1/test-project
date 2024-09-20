@@ -15,7 +15,7 @@
 .banner {
   height: 100vh;
   background: linear-gradient(180deg, rgba(39, 38, 38, 0) 0%, #272626 100%),
-  url("@/assets/banner.png") no-repeat;
+  url("@/assets/images/banner.png") no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column-reverse;

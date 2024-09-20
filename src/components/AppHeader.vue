@@ -7,7 +7,8 @@
         <div class="soc-links">
           <a v-for="(link,i) in socialLinks" :key="i" :href="link.url">
             <span class="label">{{link.name}}</span>
-            <font-awesome-icon :icon="['fab', link.name]"/>
+<!--            <font-awesome-icon :icon="['fab', link.name]"/>-->
+            <component :is="link.icon" ></component>
           </a>
         </div>
         <div class="header-buttons">
@@ -38,14 +39,17 @@ import AppLogo from "@/components/AppLogo.vue";
 import AppModal from "@/components/AppModal.vue";
 import {type Ref, ref} from "vue";
 import type {IInput} from "@/components/AppInput.vue";
+import FacebookIcon from "@/assets/icons/facebook-bg.svg"
+import TelegemIcon from "@/assets/icons/telegram-bg.svg"
+import WhatsappIcon from "@/assets/icons/whatsapp.svg"
 
 library.add(fas, faFacebook, faTelegram, faWhatsapp)
 
-const socialLinks: { name: string, url: string }[] = [
-  {name: 'facebook', url: '#',},
-  {name: 'telegram', url: '#',},
-  {name: 'whatsapp', url: '#',},
-]
+const socialLinks: { name: string, url: string, icon: any }[] = [
+  {name: 'facebook', url: '#', icon: FacebookIcon},
+  {name: 'telegram', url: '#', icon: TelegemIcon},
+  {name: 'whatsapp', url: '#', icon: WhatsappIcon},
+];
 const isShow: Ref<boolean> = ref(false)
 const dialogName: Ref<string> = ref('')
 const showDialog = (name: string) => {
@@ -147,6 +151,7 @@ header {
     margin: 0 auto;
     max-width: 1520px;
     display: flex;
+    justify-content: space-between;
 
     .header__links {
       display: flex;
@@ -165,18 +170,10 @@ header {
       .soc-links {
         margin-left: 3rem;
         display: flex;
-
+        @media (min-width: 1530px) {
+          margin-right: 1.5rem;
+        }
         a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          color: #272626;
-          background-color: #fff;
-          font-size: 1.5rem;
-          border-radius: 100%;
-          width: 40px;
-          height: 40px;
-          text-align: center;
           position: relative;
 
           & {

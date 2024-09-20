@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap");
-@import './base.css';
+@import "variables";
+@import 'base';
 
 ol.carousel__pagination {
     margin-top: 1.5rem;
@@ -16,7 +17,7 @@ button.carousel__prev {
 
 .carousel__prev:before {
     content: "";
-    background: url("@/assets/arrow-left.png");
+    background: url("@/assets/icons/arrow-left.svg");
     display: inline-block;
     width: 3.5rem;
     height: 3.5rem;
@@ -24,7 +25,7 @@ button.carousel__prev {
 
 .carousel__next:before {
     content: "";
-    background: url("@/assets/arrow-right.png");
+    background: url("@/assets/icons/arrow-right.svg");
     display: inline-block;
     width: 3.5rem;
     height: 3.5rem;

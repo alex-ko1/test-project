@@ -28,13 +28,18 @@ header {
     color: #fff;
     font-size: 1rem;
     text-transform: uppercase;
-
+    @media (min-width: 1530px) {
+      margin-right: 3rem;
+    }
     & > .nav-item:hover {
       border-bottom: 1px solid #ffffff;
     }
 
     & > .nav-item:not(:last-of-type) {
       margin-right: 3rem;
+      @media (max-width: 1440px) {
+        margin-right: 1.5rem;
+      }
     }
   }
 }

@@ -10,7 +10,7 @@
   <carousel :items-to-show="1">
     <slide v-for="slide in 5" :key="slide">
       <div class="carousel__item">
-        <img src="@/assets/slide1.png" alt=""/>
+        <img src="@/assets/images/slide1.png" alt=""/>
       </div>
     </slide>
 

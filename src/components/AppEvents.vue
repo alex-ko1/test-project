@@ -23,21 +23,21 @@ const events = ref([
     place: 'Lorem ipsum dolor sit amet consectetur',
     name: 'Назва заходу',
     description: 'Lorem ipsum dolor sit amet consectetur. Tortor duis quis dolor tellus tristique quisque in ut donec. Lacus pharetra adipiscing elit amet.',
-    image: '/src/assets/restaurant.png'
+    image: '/src/assets/images/restaurant.png'
   },
   {
     date: 'May 05, 2023',
     place: 'Lorem ipsum dolor sit amet consectetur',
     name: 'Назва заходу',
     description: 'Lorem ipsum dolor sit amet consectetur. Tortor duis quis dolor tellus tristique quisque in ut donec. Lacus pharetra adipiscing elit amet.',
-    image: '/src/assets/restaurant.png'
+    image: '/src/assets/images/restaurant.png'
   },
   {
     date: 'May 05, 2023',
     place: 'Lorem ipsum dolor sit amet consectetur',
     name: 'Назва заходу',
     description: 'Lorem ipsum dolor sit amet consectetur. Tortor duis quis dolor tellus tristique quisque in ut donec. Lacus pharetra adipiscing elit amet.',
-    image: '/src/assets/restaurant.png'
+    image: '/src/assets/images/restaurant.png'
   },
 ])
 </script>
@@ -71,12 +71,12 @@ const events = ref([
       margin: 1rem 0 .5rem;
 
       &::before {
-        background: url("@/assets/calendar.png") no-repeat;
+        background: url("@/assets/icons/calendar.svg") no-repeat;
       }
     }
 
     .place::before {
-      background: url("@/assets/location.png") no-repeat;
+      background: url("@/assets/icons/location.svg") no-repeat;
     }
 
     .date, .place {

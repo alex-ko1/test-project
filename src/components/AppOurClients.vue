@@ -2,7 +2,7 @@
   <AppSectionTitle title="Наші клієнти"/>
   <div class="subtitle">Більше 500 клієнтів по всій Україні</div>
   <div class="map">
-    <img src="@/assets/map-Ukraine.png" alt="">
+    <img src="@/assets/images/map-Ukraine.png" alt="">
   </div>
 </template>
 
@@ -17,6 +17,12 @@ import AppSectionTitle from "@/components/AppSectionTitle.vue";
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 2rem;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+  }
 }
 
 .map {

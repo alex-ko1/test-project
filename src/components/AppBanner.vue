@@ -22,7 +22,7 @@
     margin: 0 auto 4rem;
 
     h1 {
-      width: 51%;
+      width: 55%;
       font-size: 5rem;
       font-weight: 700;
       line-height: 5rem;

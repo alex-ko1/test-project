@@ -3,7 +3,8 @@
     <div class="container">
       <AppLogo/>
       <div class="header__links" :class="{'mobile-menu':isMenuOpened}">
-        <AppNavLinks/>
+        <AppNavLinks v-if="!isMobileView"/>
+        <AppMenuButton class="menu-button" v-else/>
         <div class="soc-links">
           <a v-for="(link,i) in socialLinks" :key="i" :href="link.url">
             <span class="label">{{link.name}}</span>
@@ -28,21 +29,18 @@
 </template>
 
 <script setup lang="ts">
-import {library} from '@fortawesome/fontawesome-svg-core'
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
-import {fas} from "@fortawesome/free-solid-svg-icons";
-import {faFacebook, faTelegram, faWhatsapp} from "@fortawesome/free-brands-svg-icons";
 import AppButton from "@/components/AppButton.vue";
 import AppNavLinks from "@/components/AppNavLinks.vue";
 import AppLogo from "@/components/AppLogo.vue";
 import AppModal from "@/components/AppModal.vue";
-import {type Ref, ref} from "vue";
+import {computed, type Ref, ref} from "vue";
 import type {IInput} from "@/components/AppInput.vue";
 import FacebookIcon from "@/assets/icons/facebook-bg.svg"
 import TelegemIcon from "@/assets/icons/telegram-bg.svg"
 import WhatsappIcon from "@/assets/icons/whatsapp.svg"
+import AppMenuButton from "@/components/AppMenuButton.vue";
 
-library.add(fas, faFacebook, faTelegram, faWhatsapp)
 
 const socialLinks: { name: string, url: string, icon: any }[] = [
   {name: 'facebook', url: '#', icon: FacebookIcon},
@@ -135,6 +133,13 @@ const isMenuOpened = ref(false);
 const menuToggle = () => {
   isMenuOpened.value = !isMenuOpened.value;
 }
+let windowWidth = ref(window.innerWidth);
+
+
+window.addEventListener('resize', () => {
+  windowWidth.value = window.innerWidth
+})
+const isMobileView = computed(() => windowWidth.value <= 1350)
 </script>
 
 <style scoped lang="scss">
@@ -155,8 +160,7 @@ header {
     .header__links {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-
+      justify-content: flex-end;
       .logo {
         display: block;
         margin-right: 4rem;
@@ -174,7 +178,8 @@ header {
         }
         a {
           position: relative;
-
+          display: flex;
+          align-items: center;
           & {
             margin-right: 1rem;
           }
@@ -205,6 +210,9 @@ header {
       }
     }
     .burger-button{
+      display: none;
+    }
+    .menu-button{
       display: none;
     }
     @media (max-width: 1170px) {

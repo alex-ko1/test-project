@@ -31,8 +31,11 @@ header {
     @media (min-width: 1530px) {
       margin-right: 3rem;
     }
-    & > .nav-item:hover {
-      border-bottom: 1px solid $white;
+    & > .nav-item:hover a{
+      padding-bottom: 2px;
+      &:hover {
+        border-bottom: 1px solid $white;
+      }
     }
 
     & > .nav-item:not(:last-of-type) {
@@ -51,6 +54,12 @@ footer {
     .navbar-nav {
       list-style-type: none;
       font-size: 1rem;
+      & > .nav-item a{
+        padding-bottom: 2px;
+        &:hover {
+          border-bottom: 1px solid $white;
+        }
+      }
 
       & > .nav-item:not(:last-of-type) {
         margin-bottom: 2rem;

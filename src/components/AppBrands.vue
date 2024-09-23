@@ -29,10 +29,10 @@ import AppSectionTitle from "@/components/AppSectionTitle.vue";
 <style scoped lang="scss">
 .wrapper {
   margin-top: 10rem;
+  position: relative;
   @media (max-width: 1170px) {
     margin-top: 5rem;
   }
-  position: relative;
 }
 
 .brands {
